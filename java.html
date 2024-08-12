@@ -189,13 +189,42 @@
       //  }
       //    }operator(c)
 
-      let day = prompt("enter the value");
-      let res = (day>=2024 && day<=500);
-      if (res % 4 == 0 || res % 400 == 0) {
-        console.log("it is a leap year");
-      } else {
-        console.log("it is not a leap year");
+      // let day = prompt("enter the value");
+      // let res = (day>=2024 && day<=500);
+      // if (res % 4 == 0 || res % 400 == 0) {
+      //   console.log("it is a leap year");
+      // } else {
+      //   console.log("it is not a leap year");
+      // }
+
+
+
+
+      debugger;
+      function units(z) {
+        if (units > 1 && units < 5) {
+          console.log(
+            "0% discount on a product based on the quantity purchased"
+          );
+        } else if (units > 4 && units < 10) {
+          console.log(
+            "5% discount on a product based on the quantity purchased"
+          );
+        } else if (units > 9 && units < 20) {
+          console.log(
+            "10% discount on a product based on the quantity purchased"
+          );
+        } else {
+          console.log(
+            "15% discount on a product based on the quantity purchased"
+          );
+        }
       }
+      units(20);
+
+
+
+      
     </script>
   </body>
 </html>
