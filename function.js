@@ -44,24 +44,24 @@
 // }
 
 
-debugger
+// debugger
 
-function units(z){
-    if(units>1 && units<5){
-        console.log("0% discount on a product based on the quantity purchased")
-    }
-    else if(units>4 && units<10){
-        console.log("5% discount on a product based on the quantity purchased")
-    }
-    else if(units>9 && units<20){
-        console.log("10% discount on a product based on the quantity purchased")
-    }
-    else{
-        console.log("15% discount on a product based on the quantity purchased")
-    }
-}
-units(20)
-
+// function units(z){
+//     if(units>1 && units<5){
+//         console.log("0% discount on a product based on the quantity purchased")
+//     }
+//     else if(units>4 && units<10){
+//         console.log("5% discount on a product based on the quantity purchased")
+//     }
+//     else if(units>9 && units<20){
+//         console.log("10% discount on a product based on the quantity purchased")
+//     }
+//     else{
+//         console.log("15% discount on a product based on the quantity purchased")
+//     }
+// }
+// units(20)
+1
 
 
 
@@ -95,5 +95,38 @@ units(20)
 // }
 // sayHi();
 
+// ---> String <-------
+
+// function str(x){
+// let rev="";
+//  for(i=x.length-1;i>=0;i--){
+//      rev=rev+x[i];
+//  }
+// if(rev==x){    
+//     console.log("true")}
+// else{
+//     console.log("false")
+// } }
+// str("hello")
 
 
+
+
+
+
+let x="somEThinG";
+
+console.log([x].arraylength)
+// let res=x.toLowerCase();
+// console.log(`${res.slice(0,3).toUpperCase()}${res.slice(3,5)}${res.slice(5,8).toUpperCase()}${res.slice(8,9)}`);
+// for(i in x){
+//     console.log([i])
+// }
+// for(i=1;i<x.length;i++){
+//     if(x.length%2==0){
+//         console.log("even")
+//     }
+//     else{
+//         console.log("old")
+//     }
+// }
