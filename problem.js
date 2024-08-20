@@ -76,132 +76,132 @@
 
 
 
-// // // number=prompt("enter the value");
-// // // non_primesum=0;
-// // // primesum=0;
-// // // function prime(number){
-// // // for(num of number){
-// // //        if(num>1){
-// // //         count=0
-// // //         for(i=2;i<num;i++){
-// // //             if(num%i==0){
-// // //                 non_primesum+=Number(num);
-// // //                 count++;
-// // //                 break;
-// // //             }
-// // //         }
-// // //         if(count==0){
-// // //             primesum+=Number(num);
-// // //         }
-// // //     }
-// // //     else{
-// // //         console.log("enter the valid number")
-// // //     }
-// // // }
-// // //     console.log(non_primesum)
-// // //     console.log(primesum)
-// // // }
+number=prompt("enter the value");
+non_primesum=0;
+primesum=0;
+function prime(number){
+for(num of number){
+       if(num>1){
+        count=0
+        for(i=2;i<num;i++){
+            if(num%i==0){
+                non_primesum+=Number(num);
+                count++;
+                break;
+            }
+        }
+        if(count==0){
+            primesum+=Number(num);
+        }
+    }
+    else{
+        console.log("enter the valid number")
+    }
+}
+    console.log(non_primesum)
+    console.log(primesum)
+}
     
 
 
 
 
 
-// // num=prompt('enter the value')
-// // function prime(num){
-// //     if(num>1){
-// //     count=0;
-// //     for(i=2;i<num;i++){
-// //         if(num%i==0){
-// //             console.log(`${num} is a not prime number`);
-// //             count--;
-// //             break;
-// //         }
-// //         if(count==0){
-// //             console.log(`${num} is a prime number`)
-// //             break;
-// //         }     
-// //     }
-// // }
-// //  else{
-// //     console.log(`${num} is a invalid number`)
-// //         }
-// // }
-// // prime(num)
+num=prompt('enter the value')
+function prime(num){
+    if(num>1){
+    count=0;
+    for(i=2;i<num;i++){
+        if(num%i==0){
+            console.log(`${num} is a not prime number`);
+            count--;
+            break;
+        }
+        if(count==0){
+            console.log(`${num} is a prime number`)
+            break;
+        }     
+    }
+}
+ else{
+    console.log(`${num} is a invalid number`)
+        }
+}
+prime(num)
 
 
 
 
 
 
-// let input=prompt("enter the value")
-// nonprimesum=0; primesum=0;
-// for(num of input){
-//   if(num>1){
-//     c=0;
-//     for(i=2;i<num;i++){
-//       if(num%i==0){
-//         nonprimesum=nonprimesum+Number(num);
-//         c++;
-//         break
-//       }
-//     }
-//       if(c==0){
-//         primesum=primesum+Number(num)
-//       }
+let input=prompt("enter the value")
+nonprimesum=0; primesum=0;
+for(num of input){
+  if(num>1){
+    c=0;
+    for(i=2;i<num;i++){
+      if(num%i==0){
+        nonprimesum=nonprimesum+Number(num);
+        c++;
+        break
+      }
+    }
+      if(c==0){
+        primesum=primesum+Number(num)
+      }
     
-//   }
-// }
-// result=(nonprimesum>primesum)?"primesum is bigger":"nonprimesum is bigger";
-// console.log(result)
+  }
+}
+result=(nonprimesum>primesum)?"primesum is bigger":"nonprimesum is bigger";
+console.log(result)
 
 
 // ----->17/08/2024 <------
 
 
 
-num=+prompt("enter a series number");
-a=0;b=1;
-i=1;rev=" ";
-while(i<=num){
-    if(i==num){
-    rev+=a;}
-    c=a+b;
-    a=b;
-    b=c;
-    i++;
-}
-console.log(rev)
+// num=+prompt("enter a series number");
+// a=0;b=1;
+// i=1;rev=" ";
+// while(i<=num){
+//     if(i==num){
+//     rev+=a;}
+//     c=a+b;
+//     a=b;
+//     b=c;
+//     i++;
+// }
+// console.log(rev)
 
 
 
 
-function reverseNumber(num) {
-    return (
-      parseFloat(
-        num
-          .toString()
-          .split('')
-          .reverse()
-          .join('')
-      ) 
-      * Math.sign(num)
-    )                 
-  }
+// function reverseNumber(num) {
+//     return (
+//       parseFloat(
+//         num
+//           .toString()
+//           .split('')
+//           .reverse()
+//           .join('')
+//       ) 
+//       * Math.sign(num)
+//     )                 
+//   }
   
-  console.log(reverseNumber("240"))
+//   console.log(reverseNumber("240"))
 
 
 
 
-let num=+prompt("enter a number")
-a=0;b=1;
-i=0;rev="";
-while(a<=num){
-      rev+=a+" ";
-      c=a+b;
-      a=b;
-      b=c;
-      i++;
-  }
-  console.log(rev)
+// let num=+prompt("enter a number")
+// a=0;b=1;
+// i=0;rev="";
+// while(a<=num){
+//       rev+=a+" ";
+//       c=a+b;
+//       a=b;
+//       b=c;
+//       i++;
+//   }
+//   console.log(rev)
