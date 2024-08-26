@@ -208,6 +208,9 @@ let x=[
 ];
 
 
+// --> filter and map <-----
+
+
 // x.map((a)=>{
 //     if(a.price>=25){
 //         console.log(`title:${a.title} ${a.price}`)
@@ -223,18 +226,21 @@ let x=[
 
 
 
-
+// ----> sort and find <------
 
 // let b=x.sort((a,b)=>a.price-b.price)
 // let res=b.find((c)=>{return c.category.includes("electronics")})
 // console.log(res)
 
 
-
+// ----> map and join <------
 
 //  let b=x.map((a)=>{ return (a.description)})
 //  let res=b.join(",");
 //  console.log(res)
+
+
+// ----> filter and reduce <------
 
 
 // let g=x.filter((a)=>{return a.category.includes("women's clothing")})
@@ -243,7 +249,7 @@ let x=[
 // console.log(res)
 
 
-
+// ----> filter and search  <-------
 
 let fi=x.filter((a)=>{return a.description.includes("water")}).filter((a)=>{return a.price>20})
 console.log(fi)
