@@ -242,11 +242,7 @@
 // //     b=c;
 // // }console.log(rev)
 
-
-
-
 // // ---->26/08/2024     (unq and dupl number)  s<-----
-
 
 // arr=[5,6,8,4,9,4,1,8,8,8,7,5,2,4]
 // emp=[];uni="";dup=""
@@ -269,13 +265,9 @@
 //         dup+=i+" "
 //     }
 // }
-// let res1=(uni.length<=1)?"uniques number is "+uni: "uniques number are " +uni 
-// let res=(dup.length<=1)?"duplicates number is "+dup: "duplicates number are " +dup 
+// let res1=(uni.length<=1)?"uniques number is "+uni: "uniques number are " +uni
+// let res=(dup.length<=1)?"duplicates number is "+dup: "duplicates number are " +dup
 // console.log(res1)
-
-
-
-
 
 // arr=[5,6,8,4,9,4,1,8,8,8,7,5,2,4]
 // emp=[];uni="";dup=""
@@ -300,14 +292,12 @@
 //         console.log(`${i} -> ${h}`)
 //     }
 // }
-// let res1=(uni.length<=1)?"uniques number is "+uni: "uniques number are " +uni 
-// let res=(dup.length<=1)?"duplicates number is "+dup: "duplicates number are " +dup 
+// let res1=(uni.length<=1)?"uniques number is "+uni: "uniques number are " +uni
+// let res=(dup.length<=1)?"duplicates number is "+dup: "duplicates number are " +dup
 // console.log(res1)
 // console.log(res)
 
-
 // // ---->  duplicat <---
-
 
 // arr=[23,33,200,785];
 // uni="";dup=""
@@ -318,7 +308,7 @@
 //     if(!emp.includes(g)){
 //         emp.push(g)
 //     }
-    
+
 // }
 // // console.log(emp)
 // for(i of emp){
@@ -340,28 +330,7 @@
 // console.log("1) WAP to print duplicate from given number and concat the value")
 // console.log(dup)
 
-
-
 // console.log(dup)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // arr=[8,2,4,1,2,1,5];
 // uni="";dup=""
@@ -382,13 +351,7 @@
 // }
 // console.log(uni);
 
-
-
-
-
 // // ------>tcs not <--------
-
-
 
 // Nums=[1,2,-1,1,3,1]
 // emp=[];nrep=""
@@ -407,23 +370,15 @@
 //     if(c==1){
 //        nrep+=i+", "
 //     }
-    
+
 // }
 // console.log(nrep)
-
-
-
-
-
 
 // num="871659"
 // n=num.split("").map(Number).sort();
 // c=n.slice(0,3)
 // d=n.slice(3,6).sort((a,b)=>b-a)
 // console.log(c.concat(d))
-
-
-
 
 // num="87165945"
 // temp=[]
@@ -440,38 +395,198 @@
 // res=fh.concat(sh)
 // console.log(res.flat())
 
-
-
 // -------> WAP to print number of pairs formed by the array of numbers <-------
 
+// let arr="30 50 30 50 20 50 50 20 50 50 50"
+// let num=arr.split(" ").map(Number);
+// temp=[];res="";
+// sum=0;
+// for(i of num){7
+//    if(!temp.includes(i)){
+//    temp.push(i)
+// }
+// }
+// console.log(temp)
+// for(i of temp){
+//     c=0;
+//     for(j of num){
 
+//         if(i==j){
+//             c++
 
+//         }
 
-let arr="30 50 30 50 20 50 50 20 50 50 50"
-let num=arr.split(" ").map(Number);
-temp=[];res="";
-sum=0;
-for(i of num){7
-   if(!temp.includes(i)){
-   temp.push(i)
+//     }
+//     res+=Math.floor(c/2)
+// }
+
+// for(i of res){
+//    sum+=Number(i)
+// }
+// console.log(" Sum of pair count of "+arr + "is " +sum)
+
+// ----->  2) Print the Outer layer elements side by side<----
+row = +prompt("enter a number");
+col = +prompt("enter a number");
+main = [];
+res = "";
+for (i = 1; i <= row; i++) {
+  x = [];
+  for (j = 1; j <= col; j++) {
+    console.log(i, j);
+    ele = +prompt();
+    x.push(ele);
+  }
+  main.push(x);
 }
-}
-console.log(temp)
-for(i of temp){
-    c=0;
-    for(j of num){
-        
-        if(i==j){
-            c++
-    
-        }
-      
+for (i = 0; i < main.length; i++) {
+  //temp=[]
+  for (j = 0; j < main[i].length; j++) {
+    if (i == 0 || j == 0 || i == row - 1 || j == col - 1) {
+      res += main[i][j] + " ";
+    } else {
+      res += "  ";
     }
-    res+=Math.floor(c/2)
+  }
 }
+console.log(res);
 
-for(i of res){
-   sum+=Number(i)
+// ----->  Print the diagonal elements side by side:<----
+
+row = +prompt("enter a number");
+col = +prompt("enter a number");
+main = [];
+res = "";
+for (i = 1; i <= row; i++) {
+  x = [];
+  for (j = 1; j <= col; j++) {
+    console.log(i, j);
+    ele = +prompt();
+    x.push(ele);
+  }
+  main.push(x);
 }
-console.log(" Sum of pair count of "+arr + "is " +sum)
- 
+for (i = 0; i < main.length; i++) {
+  //temp=[]
+  for (j = 0; j < main[i].length; j++) {
+    if (i == j || i + j == row - 1) {
+      res += main[i][j] + " ";
+    } else {
+      res += "  ";
+    }
+  }
+}
+console.log(res);
+
+// -----> practice <------
+
+// arr=[2,21,5,7,3,5,7,3,1,6,14,44];
+// arr2=[7,3,1];
+// function same(a,b){
+//     c=0
+//     for(k=0;k<a.length;k++){
+//         if(a[k]==b[k]){
+//             c++
+//         }
+//     }
+//     if(a.length==c){
+//         return true
+//     }
+//     return false
+// }
+// num=arr2[0]
+// for(i=0;i<arr.length;i++){
+//     if(arr[i]==num){
+//         temp=arr.slice(i,i+arr2.length)
+//         console.log(temp)
+//         if(same(temp,arr2)){
+//             console.log("true")
+//         }
+//     }
+// }
+
+// num=prompt("enter a number");
+// t="";uni=""
+// for(i of num){
+//     c=0
+//     for(j=0;j<t.length;j++){
+//         if(i==t[j]){
+//             c++
+//         }
+//     }
+//     if(c==0){
+//         t=t+i
+//     }
+// }
+// for(i of t){
+
+//     v=0
+//     for(j of num){
+//         if(i==j){
+//             v++
+//         }
+//     }
+//     if(v==1){
+//         uni+=i+" "
+//     }
+// }
+// console.log(uni)
+
+// // let num=120;
+// // leftprime=0;
+// // for(i=num-1;i>=2;i--){
+// //     c=0
+// //     for(j=2;j<i;j++){
+// //         if(i%j==0){
+// //             c++
+// //             break;
+// //         }
+// //     }
+// //     if(c==0){
+// //         leftprime=i;
+// //         break
+// //     }
+// // }
+// // console.log(leftprime)
+
+// // arr="sateesh11r";
+// // emp=[];uni=""
+// // for(i of arr){
+// // if(!emp.includes(i))
+// //  emp.push(i)
+// // // console.log(emp)
+// // // console.log(i)
+
+// // }
+// // for(i of emp){
+// //     c=0;
+// //     for(j of arr){
+// //         if(i==j){
+// //             c++
+// //         }
+// //     }
+// //     if(c==1){
+// //         uni+=i+" "
+// //     }
+// // }
+// // console.log(uni)
+
+// // arr=[8,2,4,1,2,1,5];
+// // uni="";dup=""
+// // const duplicates = arr.filter((item, index) => arr.indexOf(item) == index);
+// // console.log(duplicates)
+// // for(i of duplicates){
+// //     c=0;
+// //     for(j of arr){
+// //         if (i==j){
+// //             c++
+// //         }
+// //     }
+// //     if(c==1){
+// //         uni+=i+" "
+// //     }
+// //     else{
+// //         dup+=i+" "
+// //     }
+// // }
+// // console.log(uni);
