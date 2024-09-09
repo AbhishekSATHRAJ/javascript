@@ -244,58 +244,58 @@
 
 // // ---->26/08/2024     (unq and dupl number)  s<-----
 
-// arr=[5,6,8,4,9,4,1,8,8,8,7,5,2,4]
-// emp=[];uni="";dup=""
-// for(i of arr){
-//     if(!emp.includes(i)){
-//         emp.push(i)
-//     }
-// }console.log(emp);
-// for(i of emp){
-//     h=1;
-//     for(j of arr){
-//         if(i==j){
-//            h++
-//         }
-//     }
-//     if(h==2){
-//         uni+=i+" "
-//     }
-//     else{
-//         dup+=i+" "
-//     }
-// }
-// let res1=(uni.length<=1)?"uniques number is "+uni: "uniques number are " +uni
-// let res=(dup.length<=1)?"duplicates number is "+dup: "duplicates number are " +dup
-// console.log(res1)
+arr=[5,6,8,4,9,4,1,8,8,8,7,5,2,4]
+emp=[];uni="";dup=""
+for(i of arr){
+    if(!emp.includes(i)){
+        emp.push(i)
+    }
+}console.log(emp);
+for(i of emp){
+    h=1;
+    for(j of arr){
+        if(i==j){
+           h++
+        }
+    }
+    if(h==2){
+        uni+=i+" "
+    }
+    else{
+        dup+=i+" "
+    }
+}
+let res1=(uni.length<=2)?"uniques number is "+uni: "uniques number are " +uni
+let res=(dup.length<=2)?"duplicates number is "+dup: "duplicates number are " +dup
+console.log(res1)
 
-// arr=[5,6,8,4,9,4,1,8,8,8,7,5,2,4]
-// emp=[];uni="";dup=""
-// for(i of arr){
-//     if(!emp.includes(i)){
-//         emp.push(i)
-//     }
-// }console.log(emp);
-// for(i of emp){
-//     h=0;
-//     for(j of arr){
-//         if(i==j){
-//            h++
-//         }
-//     }
-//     if(h==1){
-//         uni+=i+" "
-//         console.log(`${i} -> ${h}`)
-//     }
-//     else{
-//         dup+=i+" "
-//         console.log(`${i} -> ${h}`)
-//     }
-// }
-// let res1=(uni.length<=1)?"uniques number is "+uni: "uniques number are " +uni
-// let res=(dup.length<=1)?"duplicates number is "+dup: "duplicates number are " +dup
-// console.log(res1)
-// console.log(res)
+arr=[5,6,8,4,9,4,1,8,8,8,7,5,2,4]
+emp=[];uni="";dup=""
+for(i of arr){
+    if(!emp.includes(i)){
+        emp.push(i)
+    }
+}console.log(emp);
+for(i of emp){
+    h=0;
+    for(j of arr){
+        if(i==j){
+           h++
+        }
+    }
+    if(h==1){
+        uni+=i+" "
+        console.log(`${i} -> ${h}`)
+    }
+    else{
+        dup+=i+" "
+        console.log(`${i} -> ${h}`)
+    }
+}
+let res1=(uni.length<=1)?"uniques number is "+uni: "uniques number are " +uni
+let res=(dup.length<=1)?"duplicates number is "+dup: "duplicates number are " +dup
+console.log(res1)
+console.log(res)
 
 // // ---->  duplicat <---
 
@@ -426,59 +426,66 @@
 // console.log(" Sum of pair count of "+arr + "is " +sum)
 
 // ----->  2) Print the Outer layer elements side by side<----
-row = +prompt("enter a number");
-col = +prompt("enter a number");
-main = [];
-res = "";
-for (i = 1; i <= row; i++) {
-  x = [];
-  for (j = 1; j <= col; j++) {
-    console.log(i, j);
-    ele = +prompt();
-    x.push(ele);
-  }
-  main.push(x);
-}
-for (i = 0; i < main.length; i++) {
-  //temp=[]
-  for (j = 0; j < main[i].length; j++) {
-    if (i == 0 || j == 0 || i == row - 1 || j == col - 1) {
-      res += main[i][j] + " ";
-    } else {
-      res += "  ";
-    }
-  }
-}
-console.log(res);
+// row = +prompt("enter a number");
+// col = +prompt("enter a number");
+// main = [];
+// res = "";
+// for (i = 1; i <= row; i++) {
+//   x = [];
+//   for (j = 1; j <= col; j++) {
+//     console.log(i, j);
+//     ele = +prompt();
+//     x.push(ele);
+//   }
+//   main.push(x);
+// }
+// for (i = 0; i < main.length; i++) {
+//   //temp=[]
+//   for (j = 0; j < main[i].length; j++) {
+//     if (i == 0 || j == 0 || i == row - 1 || j == col - 1) {
+//       res += main[i][j] + " ";
+//     } else {
+//       res += "  ";
+//     }
+//   }
+// }
+// console.log(res);
 
 // ----->  Print the diagonal elements side by side:<----
 
-row = +prompt("enter a number");
-col = +prompt("enter a number");
-main = [];
-res = "";
-for (i = 1; i <= row; i++) {
-  x = [];
-  for (j = 1; j <= col; j++) {
-    console.log(i, j);
-    ele = +prompt();
-    x.push(ele);
-  }
-  main.push(x);
-}
-for (i = 0; i < main.length; i++) {
-  //temp=[]
-  for (j = 0; j < main[i].length; j++) {
-    if (i == j || i + j == row - 1) {
-      res += main[i][j] + " ";
-    } else {
-      res += "  ";
-    }
-  }
-}
-console.log(res);
+// row = +prompt("enter a number");
+// col = +prompt("enter a number");
+// main = [];
+// res = "";
+// for (i = 1; i <= row; i++) {
+//   x = [];
+//   for (j = 1; j <= col; j++) {
+//     console.log(i, j);
+//     ele = +prompt();
+//     x.push(ele);
+//   }
+//   main.push(x);
+// }
+// for (i = 0; i < main.length; i++) {
+//   //temp=[]
+//   for (j = 0; j < main[i].length; j++) {
+//     if (i == j || i + j == row - 1) {
+//       res += main[i][j] + " ";
+//     } else {
+//       res += "  ";
+//     }
+//   }
+// }
+// console.log(res);
 
 // -----> practice <------
+
+
+
+
+
+
+
 
 // arr=[2,21,5,7,3,5,7,3,1,6,14,44];
 // arr2=[7,3,1];
@@ -504,6 +511,12 @@ console.log(res);
 //         }
 //     }
 // }
+
+
+
+
+
+
 
 // num=prompt("enter a number");
 // t="";uni=""
@@ -532,6 +545,11 @@ console.log(res);
 // }
 // console.log(uni)
 
+
+
+
+
+
 // // let num=120;
 // // leftprime=0;
 // // for(i=num-1;i>=2;i--){
@@ -548,6 +566,12 @@ console.log(res);
 // //     }
 // // }
 // // console.log(leftprime)
+
+
+
+
+
+
 
 // // arr="sateesh11r";
 // // emp=[];uni=""
@@ -570,6 +594,13 @@ console.log(res);
 // //     }
 // // }
 // // console.log(uni)
+
+
+
+
+
+
+
 
 // // arr=[8,2,4,1,2,1,5];
 // // uni="";dup=""
