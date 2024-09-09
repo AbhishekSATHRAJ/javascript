@@ -244,112 +244,171 @@
 
 // // ---->26/08/2024     (unq and dupl number)  s<-----
 
-arr=[5,6,8,4,9,4,1,8,8,8,7,5,2,4]
-emp=[];uni="";dup=""
-for(i of arr){
-    if(!emp.includes(i)){
-        emp.push(i)
-    }
-}console.log(emp);
-for(i of emp){
-    h=1;
-    for(j of arr){
-        if(i==j){
-           h++
-        }
-    }
-    if(h==2){
-        uni+=i+" "
-    }
-    else{
-        dup+=i+" "
-    }
-}
-let res1=(uni.length<=2)?"uniques number is "+uni: "uniques number are " +uni
-let res=(dup.length<=2)?"duplicates number is "+dup: "duplicates number are " +dup
-console.log(res1)
-
-arr=[5,6,8,4,9,4,1,8,8,8,7,5,2,4]
-emp=[];uni="";dup=""
-for(i of arr){
-    if(!emp.includes(i)){
-        emp.push(i)
-    }
-}console.log(emp);
-for(i of emp){
-    h=0;
-    for(j of arr){
-        if(i==j){
-           h++
-        }
-    }
-    if(h==1){
-        uni+=i+" "
-        console.log(`${i} -> ${h}`)
-    }
-    else{
-        dup+=i+" "
-        console.log(`${i} -> ${h}`)
-    }
-}
-let res1=(uni.length<=1)?"uniques number is "+uni: "uniques number are " +uni
-let res=(dup.length<=1)?"duplicates number is "+dup: "duplicates number are " +dup
-console.log(res1)
-console.log(res)
-
-// // ---->  duplicat <---
-
-// arr=[23,33,200,785];
-// uni="";dup=""
+// arr=[5,6,8,4,9,4,1,8,8,8,7,5,2,4]
+// emp=[];uni="";dup=""
 // for(i of arr){
-// x=String(i).split("").map(Number)
-// emp=[]
-// for(g of x){
-//     if(!emp.includes(g)){
-//         emp.push(g)
+//     if(!emp.includes(i)){
+//         emp.push(i)
 //     }
-
-// }
-// // console.log(emp)
+// }console.log(emp);
 // for(i of emp){
-//     c=0;
-//     for(j of x){
-//         if(i==j){
-//             c++
-//         }
-//     }
-//     if(c==1){
-//         uni+=i
-//     }
-//     else{
-//         dup+=i
-//     }
-// }
-
-// }
-// console.log("1) WAP to print duplicate from given number and concat the value")
-// console.log(dup)
-
-// console.log(dup)
-
-// arr=[8,2,4,1,2,1,5];
-// uni="";dup=""
-// const duplicates = arr.filter((item, index) => arr.indexOf(item) == index);
-// for(i of duplicates){
-//     c=0;
+//     h=1;
 //     for(j of arr){
-//         if (i==j){
-//             c++
+//         if(i==j){
+//            h++
 //         }
 //     }
-//     if(c==1){
+//     if(h==2){
 //         uni+=i+" "
 //     }
 //     else{
 //         dup+=i+" "
 //     }
 // }
-// console.log(uni);
+// let res1=(uni.length<=2)?"uniques number is "+uni: "uniques number are " +uni
+// let res=(dup.length<=2)?"duplicates number is "+dup: "duplicates number are " +dup
+// console.log(res1)
+
+// arr=[5,6,8,4,9,4,1,8,8,8,7,5,2,4]
+// emp=[];uni="";dup=""
+// for(i of arr){
+//     if(!emp.includes(i)){
+//         emp.push(i)
+//     }
+// }console.log(emp);
+// for(i of emp){
+//     h=0;
+//     for(j of arr){
+//         if(i==j){
+//            h++
+//         }
+//     }
+//     if(h==1){
+//         uni+=i+" "
+//         console.log(`${i} -> ${h}`)
+//     }
+//     else{
+//         dup+=i+" "
+//         console.log(`${i} -> ${h}`)
+//     }
+// }
+// let res1=(uni.length<=1)?"uniques number is "+uni: "uniques number are " +uni
+// let res=(dup.length<=1)?"duplicates number is "+dup: "duplicates number are " +dup
+// console.log(res1)
+// console.log(res)
+
+
+
+
+
+
+// // ---->  DATE: 27/08/2024 <---
+
+
+
+
+
+
+
+
+
+arr=[23,33,200,785];
+uni="";dup=""
+for(i of arr){
+x=String(i).split("").map(Number)
+emp=[]
+for(g of x){
+    if(!emp.includes(g)){
+        emp.push(g)
+    }
+
+}
+console.log(emp)
+for(i of emp){
+    c=0;
+    for(j of x){
+        if(i==j){
+            c++
+        }
+    }
+    if(c==1){
+        uni+=i
+    }
+    else{
+        dup+=i
+    }
+}
+
+}
+console.log("1) WAP to print duplicate from given number and concat the value")
+console.log(dup)
+
+
+
+
+
+
+
+
+arr=[538,111,200,652]
+res=[];
+for(i of arr){
+    istr=String(i)
+    c=0;
+    for(j=0;j<istr.length-1;j++){
+        if(istr[j+1]<istr[j]){
+            c++
+        }
+    }
+    res.push(istr.length-1==c)
+}
+console.log(res)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+arr=[8,2,4,1,2,1,5];
+uni="";dup=""
+const duplicates = arr.filter((item, index) => arr.indexOf(item) == index);
+for(i of duplicates){
+    c=0;
+    for(j of arr){
+        if (i==j){
+            c++
+        }
+    }
+    if(c==1){
+        uni+=i+" "
+    }
+    else{
+        dup+=i+" "
+    }
+}
+console.log(uni);
+
+
+
+
+
+
+
+
+
+
+
 
 // // ------>tcs not <--------
 
