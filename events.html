@@ -1,0 +1,137 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Event Bubbling</title>
+  </head>
+  <body>
+    <div id="p1">
+      <button id="c1">I am child button</button>
+    </div>
+
+    <script>
+      var parent = document.querySelector("#p1");
+      parent.addEventListener("click", function () {
+        console.log("Parent is invoked");
+      },true);
+
+      var child = document.querySelector("#c1");
+      child.addEventListener("click", function () {
+        console.log("Child is invoked");
+      },true);
+    </script>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width">  
+  <title>Event Capturing</title>  
+</head>  
+<body>  
+  <div id="p1">  
+    <button id="c1">I am Child</button>  
+  </div>  
+    
+  <script>  
+    var parent = document.querySelector('#p1');  
+    var child = document.querySelector('#c1');  
+  
+    parent.addEventListener('click', function(){  
+      console.log("Parent is invoked");  
+    },true);  
+    child.addEventListener('click', function(){  
+      console.log("Child is invoked");  
+    });  
+  </script>  
+</body>  
+</html>   -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Selecting or deselecting all CheckBoxes</title>
+  </head>
+  <body>
+    <div>
+      <ul id="category">
+        <li id="Grocery">Grocery</li>
+        <li id="Electronics">Electronics</li>
+        <li id="Dress">Dress</li>
+      </ul>
+    </div>
+
+    <script>
+      document.querySelector("#category").addEventListener("click", (e) => {
+        console.log(e.target.id);
+      });
+    </script>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function geek(value) {
+        return value + 100;
+      }
+
+      console.log(geek(34));
+      console.log(geek(4));
+      console.log(geek(12));
+    </script>
+  </body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function capitalize(str) { 
+  return str.toUpperCase(); 
+} 
+  
+console.log(capitalize('geeks')); // Output: GEEKS 
+console.log(capitalize('world')); // Output: WORLD
+    </script>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+  let flag = 0; 
+function incrementflag() { 
+    flag++; 
+} 
+incrementflag(); 
+console.log(flag);  
+  
+incrementflag(); 
+console.log(flag);
+    </script>
+  </body>
+</html>
