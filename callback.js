@@ -194,72 +194,68 @@
 
 // // ------> Objects <----
 
-const obj1 = { a: 1, b: 2 };
-const obj2 = { c: 3, d: 4 };
+// const obj1 = { a: 1, b: 2 };
+// const obj2 = { c: 3, d: 4 };
 
-const obj=Object.assign(obj1,obj2)
-console.log(obj)
-
-
-
-
-
-const obj = { a: 1, b: 2, c: 3, d: 4 };
-let x=Object.values(obj)
-console.log(x)
-let b=x.map((a)=>{return a})
-console.log(b)
-let c=b.reduce((a,b)=>{return a+b})
-console.log("Sum up the values of obj's properties using reduce is " + c)
+// const obj=Object.assign(obj1,obj2)
+// console.log(obj)
 
 
 
 
-const obj = { a: 1, b: 2, c: 3, d: 4 }
-newobj={};
-Object.keys(obj).forEach(a=>{
-    if(obj[a]>2){
-        newobj[a]=obj[a]
-    }
-});
-console.log(newobj)
+
+// const obj = { a: 1, b: 2, c: 3, d: 4 };
+// let x=Object.values(obj)
+// console.log(x)
+// let b=x.map((a)=>{return a})
+// console.log(b)
+// let c=b.reduce((a,b)=>{return a+b})
+// console.log("Sum up the values of obj's properties using reduce is " + c)
+
+
+
+
+// const obj = { a: 1, b: 2, c: 3, d: 4 }
+// newobj={};
+// Object.keys(obj).forEach(a=>{
+//     if(obj[a]>2){
+//         newobj[a]=obj[a]
+//     }
+// });
+// console.log(newobj)
 
 
 
 
 // ------>  date <----
 
-// const d = new Date("2024-08-28");
-// console.log(d)
-// const x=d.setDate(d.getDate() + 3);
-// const newc=new d.toDateString();
-// console.log(newc)
+// --->current date<---
+const date=new Date();
+const year=date.toDateString(date.getDate()+3);
+console.log(year)
+const week=new Date(date.getTime()+7*24*60*60*1000)
+console.log(week)
 
+// ---> add days<----
+const news=new Date();
+news.setDate(news.getDate() +3);
+console.log(news)
 
+// -->formatting date<----
+function formatDate(date) {
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    const year = date.getFullYear();
+    return `${month}/${day}/${year}`;
+}
 
+const d = new Date("2024-08-28");
+console.log(formatDate(d));
 
-// const date=new Date();
-// const year=date.toDateString(date.getDate()+3);
-// console.log(year)
-// // const dayofweek=date.setTime(UTC+5:30);
-// // console.log(dayofweek)
-// // const months=date.setMonth(11);
-// // console.log(months)
-// // const dates=date.getDate();
-// // console.log(dates)
-// const week=new Date(date.getTime()+7*24*60*60*1000)
-// console.log(week)
-
-
-// const date1=new Date("2024-08-28")
-// const date2=new Date("2024-09-01")
-// const res=Math.abs(date1-date2);
-// const res1=24*60*60*1000
-// console.log(res,res1)
-// console.log(Math.floor(res/res1))
-
-
-
-// const news=new Date();
-//  news.setDate(news.getDate() +3);
-// console.log(news)
+// -->Get Number of Days Between Dates<---
+const date1=new Date("2024-08-28")
+const date2=new Date("2024-09-01")
+const res=Math.abs(date1-date2);
+const res1=24*60*60*1000
+console.log(res,res1)
+console.log(Math.floor(res/res1))
