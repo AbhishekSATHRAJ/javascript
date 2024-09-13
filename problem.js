@@ -643,3 +643,32 @@ console.log("First missing Fibonacci number is:", missingFib);
 // //     }
 // // }
 // // console.log(uni);
+
+
+
+
+// -> remove vowels in string and  palindrome <----
+
+
+str=prompt("enter a expression")
+vowels="aeiouAEIOU";res=""
+for(i of str){
+    if(!vowels.includes(i)){
+        res=res+i
+    }
+}
+console.log(res)
+
+
+
+str=prompt("enter a expression")
+res=""
+for(i of str){
+    res=i+res
+}
+if(res==str){
+        console.log(`${str}` + " is Palindrome")
+    }
+    else{
+        console.log(`${str}`+ " is not a palindrome")
+    }
