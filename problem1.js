@@ -97,3 +97,94 @@ function findPattern(str1, str2) {
   }
 }
 findPattern(str1, str2);
+
+
+
+
+
+
+let str=prompt().split("").sort()
+emp=[]
+for(i of str){ 
+    if(!emp.includes(i)){
+        emp.push(i)
+    }
+}
+console.log(emp)
+for(i of emp){
+    c=0
+    for(j of str){
+        if(i==j){
+            c++
+        }
+    }
+        console.log(i+ " - " +c)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+row=10 //prompt("enter ")
+for(i=1;i<=row;i++){
+    res=""
+    for(k=1;k<=i-1;k++){
+        res+=" "
+    }
+    for(j=1;j<=row-i+1;j++){
+        if(j==1 ||i==1 || i+j==row+1){
+        res+="* "
+        }
+        else{
+            res+="  "
+        }
+    }
+    console.log(res)
+}
+
+
+
+row=4
+num=1
+for(i=1;i<=row;i++){
+    res=""
+    for(j=1;j<=i;j++){
+        if(i/2==1 ||i==row){
+        res=num+" "+res
+        num++
+        }
+        else{
+            res=res+num+" "
+        num++ 
+        }
+    }
+    console.log(res)
+}

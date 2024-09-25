@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Document</title>
+    <style>
+      .exit-icon {
+        font-size: 24px;
+        cursor: pointer;
+        color: red;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        width:400px;
+        height: 200px;
+        gap:5px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="textname">Username <span id="spl1" style="display: none;">already exists</span></label>
+      <input type="text" id="textname" />
+      <label for="password">Password</label>
+      <input type="password" id="password" />
+      <input type="submit"/>
+      <!-- <p id="error-message"></p> -->
+    </form>
+    <script>
+      let form = document.getElementsByTagName("form");
+      emp = []
+      form[0].addEventListener("submit", (e) => {
+        e.preventDefault();
+        let name = document.getElementById("textname").value;
+        let pass = document.getElementById("password").value;
+        let exists = emp.some((user) => user.name === name);
+        if (exists) {
+          let spl1=document.getElementById("spl1")
+          spl1.style.display = "block";
+          spl1.style.color="green"
+
+          
+          // document.getElementById("error-message").innerHTML = "Error: User already exists";
+          return;
+        }
+        else{
+        emp.push({ name: name, password: pass });
+        sessionStorage.setItem("name", name);
+        sessionStorage.setItem("password", pass);
+        console.log(emp);
+        console.log("User added successfully");
+        }
+        let body=document.createElement("div")
+        body.style.border="2px solid red"
+        body.style.height="150px"
+        body.style.width="200px"
+        body.innerHTML="Welcome "+sessionStorage.getItem("name")+" "+"password"+sessionStorage.getItem("password");
+        let exitIcon = document.createElement("i");
+        exitIcon.className = "fas fa-times"; 
+        exitIcon.style.cursor = "pointer";
+        exitIcon.style.top = "10px";
+        exitIcon.style.right = "10px";
+        deletes=[]
+        exitIcon.addEventListener("click", () => {
+          let index = emp.findIndex((user) => user.name === sessionStorage.getItem("name"));
+          if (index !== -1) {
+            emp.splice(index, 1);
+            deletes.push(emp)
+            console.log(deletes)
+          }
+
+          sessionStorage.removeItem("name");
+          sessionStorage.removeItem("password");
+
+          body.remove();
+          });
+        
+       
+
+      
+        body.appendChild(exitIcon);
+        document.body.appendChild(body)
+      
+      }
+    );
+
+    </script>
+  </body>
+</html>
