@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("Task 1");
+      class vehicle {
+        constructor(brand, model, year) {
+          this.brand = brand;
+          this.model = model;
+          this.year = year;
+        }
+        Engine() {
+          return `this vehicle model is ${this.model}`;
+        }
+        car() {
+          return `The famous ${this.brand}`;
+        }
+      }
+      class car extends vehicle {
+        constructor(brand, model, year) {
+          super(brand, model, year);
+        }
+      }
+      class truck extends vehicle {
+        constructor(brand, model, year) {
+          super(brand, model, year);
+        }
+      }
+      let obj = new car("mahendra", "THAR ROXX", 2024);
+      console.log(obj.Engine());
+      console.log(obj.car());
+      console.log(obj.brand);
+      console.log(obj.model);
+      console.log(obj.year);
+
+      let obj1 = new truck("BENZ", "bharat benz", 2020);
+      console.log(obj1.year);
+      console.log(obj1.Engine());
+      console.log(obj1.car());
+      console.log(obj1.brand);
+      console.log(obj1.model);
+
+      console.log("Task 2");
+
+      class bankAccount {
+        balance;
+        accountNumber;
+        constructor(balance, accountNumber) {
+          this.balance = balance;
+          this.accountNumber = accountNumber;
+        }
+        set deposit(amount) {
+          this.balance += amount;
+        }
+        set withdraw(amount) {
+          this.balance -= amount;
+        }
+        get getBalance() {
+          return this.balance;
+        }
+        get getdeposit() {
+          return this.deposit;
+        }
+      }
+      let ac = new bankAccount(2000, 2012345);
+      ac.deposit = 1000;
+      ac.withdraw = 2000;
+      console.log(ac.getBalance);
+
+      console.log("Task 3");
+
+      class MathHelper {
+        constructor(a, b) {
+          this.a = a;
+          this.b = b;
+        }
+        static addnumbers(a, b) {
+          return Number(a) + Number(b);
+        }
+      }
+      console.log(MathHelper.addnumbers(3384759384, 45869473));
+    </script>
+  </body>
+</html>
