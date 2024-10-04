@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   <style>
+     video{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+     }
+     img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+
+     }
+   </style>
+  </head>
+  <body>
+    <video src="./WhatsApp Video 2024-07-02 at 6.01.07 PM.mp4" controls></video>
+    <img src="./One_Piece,_Volume_61_Cover_(Japanese).jpg" alt="">
+    <button id="skipAd"></button>
+    
+    <script>
+       
+       let skip=document.getElementById("skipAd")
+       time=10
+       let timer=setInterval(countdown,1000);
+       function countdown(){
+        if(time==20){
+            clearInterval(time);
+        }
+        else{
+            skip.innerHTML=time+" "+ "Skip in"
+            time++
+        }
+       }
+       skip.addEventListener("click",function(){
+        let video=document.getElementsByTagName("video")[0];
+        let  img=document.getElementsByTagName("img")[0];
+        setTimeout(()=>{
+            img.style.display="none";
+            },5000);
+        
+        video.currentTime=0;
+        video.play();
+        })
+    
+   
+
+
+     
+
+    </script>
+  </body>
+</html>

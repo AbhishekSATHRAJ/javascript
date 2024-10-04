@@ -478,7 +478,11 @@ console.log("First missing Fibonacci number is:", missingFib);
 // }
 // console.log(" Sum of pair count of "+arr + "is " +sum)
 
+
+
+
 // ----->  2) Print the Outer layer elements side by side<----
+
 // row = +prompt("enter a number");
 // col = +prompt("enter a number");
 // main = [];
